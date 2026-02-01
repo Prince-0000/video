@@ -1,0 +1,11 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const PdfViewer = dynamic(() => import("./pdfViewer"), {
+  ssr: false,
+});
+
+export default function Page() {
+  return <PdfViewer />;
+}
